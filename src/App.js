@@ -10,11 +10,6 @@ const App = () => {
   const [ind,setindex] = useState('')
   const handlesearch=(e)=>{
       setsearch(e.target.value)
-      // return post.Results.filter((items)=>{
-      //   items.Mfr_CommonName.toLowerCase().includes(search)||
-      //   items.Country.toLowerCase().includes(search)||
-      //   items.type.toLowerCase().includes(search)
-      // })
   }
   const handelpopup=(index)=>{
       setindex(index);
@@ -27,7 +22,7 @@ const App = () => {
       return res.json()
     }).then((data) => {
       console.log(data);
-      setpost(data)
+      setpost(data.Results)
       setloading(false)
     }).catch((err) => {
       console.log(err);
@@ -70,7 +65,7 @@ const App = () => {
             <tbody>
               {
                 loading?(<p>loading...</p>):(
-                  post.Results.map((items,index)=>{
+                  post.map((items,index)=>{
                    return items.VehicleTypes.length>0 && items.Mfr_CommonName!=null?(<tr key={index} onClick={()=>handelpopup(index)}>
                     <td>{(items.Mfr_CommonName)}</td>
                     <td>{(items.Country)}</td>

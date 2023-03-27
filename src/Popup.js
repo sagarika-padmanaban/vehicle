@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect, useState } from 'react'
 import './Popup.css'
 const Popup = ({ post, setpopup, ind }) => {
+ 
   return (
     <div className='popup'>
       <div className='popup-inside-div'>
@@ -10,9 +11,9 @@ const Popup = ({ post, setpopup, ind }) => {
           </svg>
         </div>
         <div className='popup-content'>
-          <h1>{post.Results[ind].Mfr_CommonName}</h1>
-          <p>{post.Results[ind].Mfr_Name}</p>
-          <p>{post.Results[ind].Country}</p>
+          <h1>{post[ind].Mfr_CommonName}</h1>
+          <p>{post[ind].Mfr_Name}</p>
+          <p>{post[ind].Country}</p>
         </div>
       </div>
     </div>
