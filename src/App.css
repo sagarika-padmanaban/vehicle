@@ -1,0 +1,46 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.input{
+ float: left;
+}
+.vehicle{
+  position: relative;
+}
+.vehicle-container{
+  display: flex;
+  flex-direction: column;
+  gap:1rem
+}
+.vehicle-top-container{
+  margin: auto;
+}
+.dropdown{
+  float: right;
+}
+table{
+  font-family: 'Times New Roman', Times, serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: larger;
+  border: 1px solid black;
+  cursor: pointer;
+}
+tbody>p{
+  text-align: center;
+}
+table,td,th{
+  text-align: center;
+  padding: 0.3rem;
+}
+thead{
+  background-color: darkblue;
+  color: white;
+}
+td, th{
+  border: 1px,solid black;
+}
+tr:nth-child(even){
+  background-color: gainsboro;
+}
